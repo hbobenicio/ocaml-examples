@@ -1,0 +1,9 @@
+(executable
+    (public_name hello_dream)
+    (name main)
+    (modes byte exe)
+    (preprocess
+        (pps lwt_ppx))
+    (libraries
+        hello_dream
+        dream))
