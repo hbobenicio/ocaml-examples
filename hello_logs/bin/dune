@@ -1,0 +1,7 @@
+(executable
+ (public_name hello_logs)
+ (name main)
+ (libraries
+  hello_logs
+  unix
+  logs logs.fmt))
