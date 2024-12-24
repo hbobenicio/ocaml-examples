@@ -1,7 +1,7 @@
 open Printf
 
+(** returns a string representing the current timestamp *)
 let timestamp_str () : string =
-    (** returns a string representing the current timestamp *)
     let now: Unix.tm = Unix.gmtime (Unix.gettimeofday ()) in
     sprintf "%04d-%02d-%02d %02d:%02d:%02d"
         (1900 + now.tm_year)
