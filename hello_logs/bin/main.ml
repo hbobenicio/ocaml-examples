@@ -12,8 +12,11 @@ let timestamp_str () : string =
 let timestamped_reporter () : Logs.reporter =
     let pp_header (ppf: Format.formatter) ((level, header): Logs.level * string option) =
         let header: string = Option.value header ~default:"" in
-        let timestamp = timestamp_str () in
-        Fmt.pf ppf "%s [%a] %s" timestamp Logs.pp_level level header
+        Fmt.pf ppf "%s [%a] %s"
+            (timestamp_str ())
+            Logs.pp_level
+            level
+            header
     in
     Logs_fmt.reporter ~pp_header ()
 
